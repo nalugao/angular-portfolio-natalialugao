@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: space mono;
+  --wine-color: #842a3b;
+  --bege-color: #f7f1de;
+  background: var(--bege-color);
+  color: var(--wine-color);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.title {
+  font-size: 3rem;
+  color: #6b2737;
+  font-weight: bold;
+}

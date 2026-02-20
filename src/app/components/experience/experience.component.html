@@ -1,0 +1,74 @@
+<section class="experience-section">
+  <h1 class="title">Minhas Experiências</h1>
+
+  <!-- projetos -->
+  <div class="experience-container">
+    <h2 class="subtitle">Projetos:</h2>
+    <div class="experience-content">
+
+      <ul class="experience-list">
+        @for (projeto of projetos; track projeto.nome) {
+          <li 
+            [class.active]="projetoSelecionado().nome === projeto.nome"
+            (click)="selecionar(projeto)">
+            {{ projeto.nome }}
+          </li>
+        }
+      </ul>
+
+
+      <div class="experience-detail">
+        <h3>{{ projetoSelecionado().cargo }}</h3>
+        <div class="links">
+          @if (projetoSelecionado().links?.site) {
+  <a [href]="projetoSelecionado().links?.site" target="_blank">
+    <i class="fas fa-external-link-alt"></i>
+  </a>
+}
+@if (projetoSelecionado().links?.youtube) {
+  <a [href]="projetoSelecionado().links?.youtube" target="_blank">
+    <i class="fab fa-youtube"></i>
+  </a>
+}
+@if (projetoSelecionado().links?.github) {
+  <a [href]="projetoSelecionado().links?.github" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+}
+        </div>
+        @if (projetoSelecionado().descricao) {
+  <p>► {{ projetoSelecionado().descricao }}</p>
+}
+@if (projetoSelecionado().contribuicao) {
+  <p>► {{ projetoSelecionado().contribuicao }}</p>
+}
+@if (projetoSelecionado().tecnologias) {
+  <p>► {{ projetoSelecionado().tecnologias }}</p>
+}
+      </div>
+    </div>
+  </div>
+
+  <!-- profissionais -->
+
+  <h2 class="subtitle">Profissionais:</h2>
+<div class="experience-content">
+  <ul class="experience-list">
+    @for (prof of profissionais; track prof.nome) {
+      <li
+        [class.active]="profissionalSelecionado().nome === prof.nome"
+        (click)="selecionarProfissional(prof)">
+        {{ prof.nome }}
+      </li>
+    }
+  </ul>
+
+  <div class="experience-detail">
+    <h3>{{ profissionalSelecionado().cargo }}</h3>
+    <p class="periodo">{{ profissionalSelecionado().periodo }}</p>
+    @for (desc of profissionalSelecionado().descricoes; track desc) {
+      <p>► {{ desc }}</p>
+    }
+  </div>
+</div>
+</section>
