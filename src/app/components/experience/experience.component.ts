@@ -49,10 +49,10 @@ export class ExperienceComponent {
     },
   ];
 
-  projetoSelecionado = signal(this.projetos[0]);
+  projetoSelecionado = this.projetos[0];
 
   selecionar(projeto: any) {
-    this.projetoSelecionado.set(projeto);   
+    this.projetoSelecionado = projeto;
   }
 
   profissionais = [

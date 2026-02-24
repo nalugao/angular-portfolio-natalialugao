@@ -9,7 +9,7 @@
       <ul class="experience-list">
         @for (projeto of projetos; track projeto.nome) {
           <li
-            [class.active]="projetoSelecionado().nome === projeto.nome"
+            [class.active]="projetoSelecionado.nome === projeto.nome"
             (click)="selecionar(projeto)">
             {{ projeto.nome }}
           </li>
@@ -17,33 +17,33 @@
       </ul>
 
       <div class="experience-detail">
-        <h3>{{ projetoSelecionado().cargo }}</h3>
+        <h3>{{ projetoSelecionado.cargo }}</h3>
         <div class="links">
 
-          @if (projetoSelecionado().links?.site) {
-            <a [href]="projetoSelecionado().links?.site" target="_blank">
+          @if (projetoSelecionado.links?.site) {
+            <a [href]="projetoSelecionado.links?.site" target="_blank">
               <i class="fas fa-external-link-alt"></i>
             </a>
           }
-          @if (projetoSelecionado().links?.youtube) {
-            <a [href]="projetoSelecionado().links?.youtube" target="_blank">
+          @if (projetoSelecionado.links?.youtube) {
+            <a [href]="projetoSelecionado.links?.youtube" target="_blank">
               <i class="fab fa-youtube"></i>
             </a>
           }
-          @if (projetoSelecionado().links?.github) {
-            <a [href]="projetoSelecionado().links?.github" target="_blank">
+          @if (projetoSelecionado.links?.github) {
+            <a [href]="projetoSelecionado.links?.github" target="_blank">
               <i class="fab fa-github"></i>
             </a>
           }
         </div>
-        @if (projetoSelecionado().descricao) {
-          <p>► {{ projetoSelecionado().descricao }}</p>
+        @if (projetoSelecionado.descricao) {
+          <p>► {{ projetoSelecionado.descricao }}</p>
         }
-        @if (projetoSelecionado().contribuicao) {
-          <p>► {{ projetoSelecionado().contribuicao }}</p>
+        @if (projetoSelecionado.contribuicao) {
+          <p>► {{ projetoSelecionado.contribuicao }}</p>
         }
-        @if (projetoSelecionado().tecnologias) {
-          <p>► {{ projetoSelecionado().tecnologias }}</p>
+        @if (projetoSelecionado.tecnologias) {
+          <p>► {{ projetoSelecionado.tecnologias }}</p>
         }
       </div>
     </div>
