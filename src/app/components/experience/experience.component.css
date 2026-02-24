@@ -140,4 +140,8 @@ html, body {
   .experience-detail {
     width: 100%;
   }
+
+  .title {
+    font-size: 1.9rem;
+  }
 }
