@@ -24,12 +24,15 @@
 
 .experience-container {
   width: 100%;
+  height: 500px;
   margin-top: 40px;
 }
 
 
 .experience-content {
   display: flex;
+    height: 400px;
+
   gap: 60px;
 }
 
@@ -85,6 +88,8 @@
 
   .experience-content {
     flex-direction: column;
+    border: #6b2737 solid 1px;
+    height: 100px;
   }
 
   .experience-list {
