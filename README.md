@@ -1,62 +1,76 @@
-# Portfolio
+# Portfólio — Natalia Lugão
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.20.
+Recriação do portfólio pessoal desenvolvido em **Angular 19**, com foco em boas práticas modernas do framework.
 
-## Development server
+---
 
-To start a local development server, run:
+## Tecnologias utilizadas
+
+- [Angular 19](https://angular.io/)
+- TypeScript
+- HTML5 & CSS3
+- Font Awesome (ícones de redes sociais)
+- Devicons (ícones de tecnologias)
+
+---
+
+## Estrutura de componentes
+
+```
+src/app/components/
+├── navbar/       → Barra de navegação fixa com links para redes sociais
+├── home/         → Apresentação com efeito de digitação animado
+├── about/        → Sobre mim com foto e descrição
+├── skills/       → Grade de habilidades técnicas
+├── experience/   → Experiências profissionais e projetos com seleção dinâmica
+└── footer/       → Rodapé com créditos
+```
+
+---
+
+## Funcionalidades
+
+- Efeito de digitação animado (typing effect) em cada seção
+- Seleção dinâmica de projetos e experiências profissionais
+- Layout totalmente responsivo para mobile e desktop
+- Navbar fixa com links para YouTube, LinkedIn e GitHub
+- Seções organizadas com scroll contínuo
+
+---
+
+## Como rodar o projeto
+
+**Pré-requisitos:** Node.js e Angular CLI instalados.
 
 ```bash
+# Clone o repositório
+git clone https://github.com/seuusuario/portfolio.git
+
+# Entre na pasta
+cd portfolio
+
+# Instale as dependências
+npm install
+
+# Rode o servidor de desenvolvimento
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Acesse em: [http://localhost:4200](http://localhost:4200)
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Dependências externas
 
 ```bash
-ng generate --help
+# Ícones Font Awesome
+npm install @fortawesome/fontawesome-free
 ```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
+No `styles.css`:
+```css
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css');
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# angular-portfolio-natalialugao
-# angular-portfolio-natalialugao
-# angular-portfolio-natalialugao
+---
